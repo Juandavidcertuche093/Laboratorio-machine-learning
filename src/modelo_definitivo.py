@@ -85,7 +85,7 @@ if __name__ == "__main__":
     plt.xlabel('Predicted Labels')
     plt.ylabel('True Labels')
     plt.title('RandomForest')
-    plt.savefig('figura_modelo_actualizado.png')
+    #plt.savefig('figura_modelo_actualizado.png')
     plt.show()
 
     
