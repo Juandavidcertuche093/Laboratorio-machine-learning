@@ -19,6 +19,7 @@ if __name__ == "__main__":
     df = pd.read_csv("./data/churn.csv")
 
 
+
     df_categoricas = df.select_dtypes(include=['object','category'])
     df_numericas = df.select_dtypes(include='number')
 
@@ -30,6 +31,8 @@ if __name__ == "__main__":
     colums_num = df_numericas.columns
     print(colums_num)
     print(df_numericas.describe())
+
+    df = df.drop(df.columns[0:3], axis=1)
 
     column_equivalence = {}
     features = list(df.columns)
@@ -43,7 +46,8 @@ if __name__ == "__main__":
         else:
             df[df.columns[i]] = df[df.columns[i]].fillna(df[df.columns[i]].median())
 
-   
+    print(column_equivalence)
+
 
     X = df.drop('Exited' , axis=1)
     y = df['Exited']
