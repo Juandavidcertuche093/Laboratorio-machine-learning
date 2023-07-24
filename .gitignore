@@ -3,7 +3,6 @@ venv/
 /src/modelo_pca.py
 /src/modelo_kpca.py
 /src/modelo_boosting.py
-/src/optimizando_modelo_actualizado.py
 /src/modelo_actualizar.py
 /src/comparacion.py
 /src/modelo_actualizado.py
